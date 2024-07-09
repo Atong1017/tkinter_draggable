@@ -1,4 +1,5 @@
-![tkinter_draggable](https://github.com/Atong1017/tkinter_draggable/assets/60724932/13ddbd4c-d058-4c65-bd5d-7323e53f12b1)
+![image](https://github.com/Atong1017/tkinter_draggable/assets/60724932/f57ff248-61f8-4513-bca4-f7b20f4f569b)
+
 
 使用tkinter時，常因排版浪費很多時間，所以創建一份拖曳選單的功能，先大致排版再細部微調，以達節省時效。
 
