@@ -37,10 +37,10 @@ class Application:
         self.load_button = tk.Button(root, text="加載", command=self.load_ui)
         self.load_button.place(x=430, y=400)
 
-        self.confirm_button = tk.Button(root, text="保存.py", command=self.save_as_py)
+        self.confirm_button = tk.Button(root, text="保存", command=self.save_as_py)
         self.confirm_button.place(x=360, y=450)
 
-        self.save_button = tk.Button(root, text="保存.json", command=self.save_ui)
+        self.save_button = tk.Button(root, text="預存", command=self.save_ui)
         self.save_button.place(x=430, y=450)
 
         self.combobox_list = []
