@@ -9,8 +9,9 @@ class DraggableCombobox:
         self.resizing = False  # 用於判斷是否處於調整大小狀態
         self.start_x = 0
         self.start_y = 0
-        self.selected_entry = None
+        self.selected_entry = None  # 選中的選單
 
+        # 建立預設選單
         if self.selected_option == 'Combobox':
             self.form = ttk.Combobox(parent, values=["Option 1", "Option 2", "Option 3"])
             self.form.set(current_value)
@@ -26,20 +27,25 @@ class DraggableCombobox:
                 current_value = 'Button'
             self.form = tk.Button(parent, text=current_value)
 
+        # 選單位置、大小
         self.form.place(x=initial_position[0], y=initial_position[1], width=width, height=height)
 
+        # 建立選單刪除鈕
         self.delete_button = tk.Button(parent, text="X", command=self.delete_selected)
         self.delete_button.place(x=initial_position[0] + width, y=initial_position[1])
 
+        # 選單促發內容
         self.form.bind("<ButtonPress-1>", self.on_press)
         self.form.bind("<B1-Motion>", self.on_motion)
         self.form.bind("<Enter>", self.on_enter)
         self.form.bind("<Leave>", self.on_leave)
         self.form.bind("<Motion>", self.on_resize_motion)
 
+    # 選中的選單
     def select_entry(self, entry):
         self.selected_entry = entry
 
+    # 刪除選中的選單
     def delete_selected(self):
         if self.form:
             self.form.destroy()
