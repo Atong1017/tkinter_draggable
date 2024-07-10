@@ -73,16 +73,16 @@ class Application:
             widget_height = cb.form.winfo_height()
 
             if 'entry' in str(cb.form):
-                code += f"entry{idx+1} = tk.Entry(root)\n"
+                code += f"entry{idx + 1} = tk.Entry(root)\n"
                 code += f"entry{idx + 1}.insert(0, '{current_value}')\n"
-                code += f"entry{idx+1}.place(x={pos[0]}, y={pos[1]}, width={widget_width}, height={widget_height})\n\n"
+                code += f"entry{idx + 1}.place(x={pos[0]}, y={pos[1]}, width={widget_width}, height={widget_height})\n\n"
 
             elif 'combobox' in str(cb.form):
                 if current_value not in values:
                     values += (current_value, )
-                code += f"combobox{idx+1} = ttk.Combobox(root, values={values})\n"
-                code += f"combobox{idx+1}.place(x={pos[0]}, y={pos[1]})\n"
-                code += f"combobox{idx+1}.set('{current_value}')\n\n"
+                code += f"combobox{idx + 1} = ttk.Combobox(root, values={values})\n"
+                code += f"combobox{idx + 1}.place(x={pos[0]}, y={pos[1]})\n"
+                code += f"combobox{idx + 1}.set('{current_value}')\n\n"
 
             elif 'label' in str(cb.form):
                 code += f"label = tk.Label(root, text='{current_value}')\n"
