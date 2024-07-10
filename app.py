@@ -43,9 +43,6 @@ class Application:
         self.save_button = tk.Button(root, text="預存", command=self.save_ui)
         self.save_button.place(x=430, y=450)
 
-        # self.delete_button = tk.Button(root, text="X", command=DraggableCombobox.delete_selected)
-        # self.delete_button.place(x=150, y=0)
-
         self.combobox_list = []
 
     def add_combobox(self):
@@ -150,8 +147,7 @@ class Application:
                 self.combobox_list.append(new_combobox)
             messagebox.showinfo("加載成功", "UI 配置已加載")
         except Exception as e:
-            print(e)
-            # messagebox.showerror("加載失敗", f"加載 UI 配置時發生錯誤：{str(e)}")
+            messagebox.showerror("加載失敗", f"加載 UI 配置時發生錯誤：{str(e)}")
 
 
 if __name__ == "__main__":
