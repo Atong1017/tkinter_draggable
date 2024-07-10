@@ -43,16 +43,19 @@ class Application:
         self.save_button = tk.Button(root, text="預存", command=self.save_ui)
         self.save_button.place(x=430, y=450)
 
+        # self.delete_button = tk.Button(root, text="X", command=DraggableCombobox.delete_selected)
+        # self.delete_button.place(x=150, y=0)
+
         self.combobox_list = []
 
     def add_combobox(self):
         initial_position = (50, 50 + 30 * len(self.combobox_list))
         oc_get = self.option_combobox.get()
         new_combobox = DraggableCombobox(self.root, oc_get, initial_position, current_value=self.option_entry.get())
+        new_combobox.parent = self  # 設置父應用程序以便刪除
         self.combobox_list.append(new_combobox)
 
     def generate_code(self):
-
         code = "import tkinter as tk\n"
         code += "from tkinter import ttk\n\n"
 
@@ -85,11 +88,11 @@ class Application:
                 code += f"combobox{idx+1}.set('{current_value}')\n\n"
 
             elif 'label' in str(cb.form):
-                code += "label = tk.Label(root, text='這是一個標籤')\n"
+                code += f"label = tk.Label(root, text='{current_value}')\n"
                 code += f"label.place(x={pos[0]}, y={pos[1]}, width={widget_width}, height={widget_height})\n\n"
 
             elif 'button' in str(cb.form):
-                code += "button = tk.Button(root, text='按鈕')\n"
+                code += f"button = tk.Button(root, text='{current_value}')\n"
                 code += f"button.place(x={pos[0]}, y={pos[1]}, width={widget_width}, height={widget_height})\n\n"
 
         code += "root.mainloop()\n"
@@ -106,7 +109,6 @@ class Application:
             messagebox.showerror("保存失敗", f"保存程式碼時發生錯誤：{str(e)}")
 
     def save_ui(self):
-        print(self.combobox_list)
         ui_config = [cb.get_config() for cb in self.combobox_list]
         try:
             with open(f"{self.option_entry1.get()}.json", "w", encoding="utf-8") as f:
@@ -127,11 +129,11 @@ class Application:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 ui_config = json.load(f)
-                print(ui_config)
 
             # 清空当前控件
             for combobox in self.combobox_list:
                 combobox.form.destroy()
+                combobox.delete_button.destroy()
             self.combobox_list.clear()
 
             # 加載新控件
@@ -144,6 +146,7 @@ class Application:
                     config['size'][1],
                     config['current_value']
                 )
+                new_combobox.parent = self  # 設置父應用程序以便刪除
                 self.combobox_list.append(new_combobox)
             messagebox.showinfo("加載成功", "UI 配置已加載")
         except Exception as e:

@@ -3,11 +3,13 @@ from tkinter import ttk
 
 
 class DraggableCombobox:
-    def __init__(self, parent, selected_option, initial_position=(50, 50), width=100, height=30, current_value=''):
+    def __init__(self, parent, selected_option, initial_position=(50, 50), width=100, height=20, current_value=''):
+        self.parent = parent
         self.selected_option = selected_option
         self.resizing = False  # 用於判斷是否處於調整大小狀態
         self.start_x = 0
         self.start_y = 0
+        self.selected_entry = None
 
         if self.selected_option == 'Combobox':
             self.form = ttk.Combobox(parent, values=["Option 1", "Option 2", "Option 3"])
@@ -24,20 +26,30 @@ class DraggableCombobox:
                 current_value = 'Button'
             self.form = tk.Button(parent, text=current_value)
 
-        self.form.place(x=initial_position[0], y=initial_position[1])
+        self.form.place(x=initial_position[0], y=initial_position[1], width=width, height=height)
+
+        self.delete_button = tk.Button(parent, text="X", command=self.delete_selected)
+        self.delete_button.place(x=initial_position[0] + width, y=initial_position[1])
+
         self.form.bind("<ButtonPress-1>", self.on_press)
         self.form.bind("<B1-Motion>", self.on_motion)
         self.form.bind("<Enter>", self.on_enter)
         self.form.bind("<Leave>", self.on_leave)
         self.form.bind("<Motion>", self.on_resize_motion)
 
+    def select_entry(self, entry):
+        self.selected_entry = entry
+
+    def delete_selected(self):
+        if self.form:
+            self.form.destroy()
+            self.delete_button.destroy()
+            self.parent.combobox_list.remove(self)
+
     def on_press(self, event):
-        if self.resizing:
-            self.start_x = event.x_root
-            self.start_y = event.y_root
-        else:
-            self.start_x = event.x
-            self.start_y = event.y
+        self.select_entry(self.form)  # 选择控件
+        self.start_x = event.x_root
+        self.start_y = event.y_root
 
     def on_motion(self, event):
         if self.resizing:
@@ -46,9 +58,12 @@ class DraggableCombobox:
             self.drag(event)
 
     def drag(self, event):
-        new_x = self.form.winfo_x() + (event.x - self.start_x)
-        new_y = self.form.winfo_y() + (event.y - self.start_y)
+        new_x = self.form.winfo_x() + (event.x_root - self.start_x)
+        new_y = self.form.winfo_y() + (event.y_root - self.start_y)
         self.form.place(x=new_x, y=new_y)
+        self.delete_button.place(x=new_x + self.form.winfo_width(), y=new_y)
+        self.start_x = event.x_root
+        self.start_y = event.y_root
 
     def resize(self, event):
         new_width = self.form.winfo_width() + (event.x_root - self.start_x)
@@ -56,6 +71,7 @@ class DraggableCombobox:
         self.form.place(width=new_width, height=new_height)
         self.start_x = event.x_root
         self.start_y = event.y_root
+        self.delete_button.place(x=self.form.winfo_x() + new_width, y=self.form.winfo_y())
 
     def on_enter(self, event):
         self.form.config(cursor="arrow")
