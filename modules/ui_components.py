@@ -5,7 +5,7 @@ from tkinter import ttk
 class DraggableCombobox:
     def __init__(self, parent, selected_option, initial_position=(50, 50), width=100, height=20, current_value=''):
         self.parent = parent
-        self.selected_option = selected_option
+        self.selected_option = selected_option  # 要新增的選單
         self.resizing = False  # 用於判斷是否處於調整大小狀態
         self.start_x = 0
         self.start_y = 0
@@ -20,7 +20,7 @@ class DraggableCombobox:
         elif self.selected_option == 'Label':
             if current_value == "":
                 current_value = 'Label'
-            self.form = tk.Label(parent, text=current_value)
+            self.form = tk.Label(parent, text=current_value, bg='LightGray')
         elif self.selected_option == 'Button':
             if current_value == "":
                 current_value = 'Button'
