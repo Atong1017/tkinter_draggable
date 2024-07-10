@@ -1,22 +1,9 @@
 [
     {
-        "type": "Label",
-        "position": [
-            22,
-            33
-        ],
-        "size": [
-            37,
-            21
-        ],
-        "current_value": "筆數:",
-        "values": []
-    },
-    {
         "type": "Entry",
         "position": [
-            78,
-            35
+            50,
+            50
         ],
         "size": [
             100,
@@ -26,29 +13,29 @@
         "values": []
     },
     {
-        "type": "Label",
+        "type": "Entry",
         "position": [
-            21,
-            66
-        ],
-        "size": [
-            38,
-            19
-        ],
-        "current_value": "種類:",
-        "values": []
-    },
-    {
-        "type": "Combobox",
-        "position": [
-            78,
-            66
+            50,
+            80
         ],
         "size": [
             100,
             20
         ],
-        "current_value": "Option 1",
+        "current_value": "",
+        "values": []
+    },
+    {
+        "type": "Combobox",
+        "position": [
+            50,
+            110
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "",
         "values": [
             "Option 1",
             "Option 2",
@@ -56,29 +43,72 @@
         ]
     },
     {
-        "type": "Button",
+        "type": "Combobox",
         "position": [
-            354,
-            335
+            50,
+            140
         ],
         "size": [
             100,
             20
         ],
-        "current_value": "計算",
+        "current_value": "",
+        "values": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ]
+    },
+    {
+        "type": "Label",
+        "position": [
+            50,
+            170
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "aa",
         "values": []
     },
     {
-        "type": "Entry",
+        "type": "Label",
         "position": [
-            20,
-            95
+            50,
+            200
         ],
         "size": [
-            458,
-            228
+            100,
+            20
         ],
-        "current_value": "",
+        "current_value": "aa",
+        "values": []
+    },
+    {
+        "type": "Button",
+        "position": [
+            50,
+            230
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "bb",
+        "values": []
+    },
+    {
+        "type": "Button",
+        "position": [
+            50,
+            260
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "bb",
         "values": []
     }
 ]
