@@ -1,48 +1,9 @@
 [
     {
-        "type": "Entry",
-        "position": [
-            50,
-            50
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "",
-        "values": []
-    },
-    {
-        "type": "Entry",
-        "position": [
-            50,
-            80
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "",
-        "values": []
-    },
-    {
-        "type": "Entry",
-        "position": [
-            50,
-            110
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "",
-        "values": []
-    },
-    {
         "type": "Combobox",
         "position": [
-            50,
-            140
+            15,
+            19
         ],
         "size": [
             100,
@@ -58,8 +19,8 @@
     {
         "type": "Combobox",
         "position": [
-            50,
-            170
+            313,
+            130
         ],
         "size": [
             100,
@@ -76,13 +37,52 @@
         "type": "Label",
         "position": [
             50,
+            110
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "自訂組數:",
+        "values": []
+    },
+    {
+        "type": "Label",
+        "position": [
+            50,
+            140
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "連錯換單:",
+        "values": []
+    },
+    {
+        "type": "Label",
+        "position": [
+            50,
+            170
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "%",
+        "values": []
+    },
+    {
+        "type": "Label",
+        "position": [
+            50,
             200
         ],
         "size": [
             100,
             20
         ],
-        "current_value": "Label",
+        "current_value": "%",
         "values": []
     },
     {
@@ -95,11 +95,11 @@
             100,
             20
         ],
-        "current_value": "Label",
+        "current_value": "歷史筆數",
         "values": []
     },
     {
-        "type": "Button",
+        "type": "Label",
         "position": [
             50,
             260
@@ -108,11 +108,11 @@
             100,
             20
         ],
-        "current_value": "Button",
+        "current_value": "下單組數(-+):",
         "values": []
     },
     {
-        "type": "Button",
+        "type": "Label",
         "position": [
             50,
             290
@@ -121,7 +121,7 @@
             100,
             20
         ],
-        "current_value": "Button",
+        "current_value": "次後不再下注:",
         "values": []
     }
 ]

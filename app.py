@@ -47,7 +47,12 @@ class Application:
         self.combobox_list = []
 
     def add_combobox(self):
-        initial_position = (50, 50 + 30 * len(self.combobox_list))
+        list_count = len(self.combobox_list) // 10  # 每10個後換行
+        list_mode = len(self.combobox_list) % 10  # 10個內往下新增列
+        add_x = 10 + 120 * list_count
+        add_y = 10 + 30 * list_mode
+
+        initial_position = (add_x, add_y)
         oc_get = self.option_combobox.get()
         new_combobox = DraggableCombobox(self.root, oc_get, initial_position, current_value=self.option_entry.get())
         new_combobox.parent = self  # 設置父應用程序以便刪除
