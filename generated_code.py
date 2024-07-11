@@ -6,8 +6,8 @@ root.geometry('500x500')
 root.title('Generated Window')
 
 entries = [
-    ('entry1', '', 50, 50, 100, 20),
-    ('entry2', '', 50, 80, 100, 20),
+    ('entry1', '', 165, 42, 100, 20),
+    ('entry2', '', 44, 81, 419, 249),
 ]
 components = {}
 for entry_name, entry_value, x_entry, y_entry, width, height in entries:
@@ -16,8 +16,8 @@ for entry_name, entry_value, x_entry, y_entry, width, height in entries:
     components[entry_name].place(x=x_entry, y=y_entry, width=width, height=height)
 
 comboboxes = [
-    ('combobox3', ('Option 1', 'Option 2', 'Option 3', ''), 50, 110, 100, 20, ''),
-    ('combobox4', ('Option 1', 'Option 2', 'Option 3', ''), 50, 140, 100, 20, ''),
+    ('combobox3', ('Option 1', 'Option 2', 'Option 3', ''), 288, 44, 100, 20, ''),
+    ('combobox4', ('Option 1', 'Option 2', 'Option 3', ''), 249, 349, 100, 20, ''),
 ]
 components.update({})
 for combobox_name, values, x_combobox, y_combobox, width, height, current_value in comboboxes:
@@ -26,8 +26,7 @@ for combobox_name, values, x_combobox, y_combobox, width, height, current_value 
     components[combobox_name].set(current_value)
 
 labels = [
-    ('label5', 'aa', 50, 170, 100, 20),
-    ('label6', 'aa', 50, 200, 100, 20),
+    ('label5', 'Label', 45, 40, 100, 20),
 ]
 components.update({})
 for label_name, text, x_label, y_label, width, height in labels:
@@ -35,8 +34,7 @@ for label_name, text, x_label, y_label, width, height in labels:
     components[label_name].place(x=x_label, y=y_label, width=width, height=height)
 
 buttons = [
-    ('button7', 'bb', 50, 230, 100, 20),
-    ('button8', 'bb', 50, 260, 100, 20),
+    ('button6', 'Button', 368, 352, 100, 20),
 ]
 components.update({})
 for button_name, text, x_button, y_button, width, height in buttons:
