@@ -16,10 +16,8 @@ class Application:
         self.file_manager = FileManager(self.components_manager, self.option_entry1)
 
     def add_combobox(self):
-        # ui_initializer得到以下二參數
         component_type = self.option_combobox.get()
         current_value = self.option_entry.get()
-
         self.components_manager.add_combobox(component_type, current_value)
 
     def save_as_py(self):

@@ -2,8 +2,8 @@
     {
         "type": "Entry",
         "position": [
-            165,
-            42
+            50,
+            50
         ],
         "size": [
             100,
@@ -15,12 +15,25 @@
     {
         "type": "Entry",
         "position": [
-            44,
-            81
+            50,
+            80
         ],
         "size": [
-            419,
-            249
+            100,
+            20
+        ],
+        "current_value": "",
+        "values": []
+    },
+    {
+        "type": "Entry",
+        "position": [
+            50,
+            110
+        ],
+        "size": [
+            100,
+            20
         ],
         "current_value": "",
         "values": []
@@ -28,8 +41,8 @@
     {
         "type": "Combobox",
         "position": [
-            288,
-            44
+            50,
+            140
         ],
         "size": [
             100,
@@ -45,8 +58,8 @@
     {
         "type": "Combobox",
         "position": [
-            249,
-            349
+            50,
+            170
         ],
         "size": [
             100,
@@ -62,8 +75,21 @@
     {
         "type": "Label",
         "position": [
-            45,
-            40
+            50,
+            200
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "Label",
+        "values": []
+    },
+    {
+        "type": "Label",
+        "position": [
+            50,
+            230
         ],
         "size": [
             100,
@@ -75,8 +101,21 @@
     {
         "type": "Button",
         "position": [
-            368,
-            352
+            50,
+            260
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "Button",
+        "values": []
+    },
+    {
+        "type": "Button",
+        "position": [
+            50,
+            290
         ],
         "size": [
             100,
