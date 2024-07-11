@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
-root.geometry('666x500')
+root.geometry('500x500')
 root.title('Generated Window')
 
 comboboxes = [
@@ -23,6 +23,12 @@ labels = [
     ('label7', '歷史筆數', 50, 230, 100, 20),
     ('label8', '下單組數(-+):', 50, 260, 100, 20),
     ('label9', '次後不再下注:', 50, 290, 100, 20),
+    ('label10', '二次換單:', 48, 322, 100, 20),
+    ('label11', '起始金額:', 130, 10, 100, 20),
+    ('label12', '每單籌碼:', 130, 40, 100, 20),
+    ('label13', '模擬器:', 130, 70, 100, 20),
+    ('label14', '更新排名:', 130, 100, 100, 20),
+    ('label15', '內無則扣除:', 130, 130, 100, 20),
 ]
 components.update({})
 for label_name, text, x_label, y_label, width, height in labels:
