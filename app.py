@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 from modules.ui_components import DraggableCombobox
 from code_generator.generator import CodeGenerator
-import json
 import re
 
 
@@ -34,16 +33,13 @@ class Application:
         self.option_entry1.place(x=45, y=460, width=90)
 
         self.add_button = tk.Button(root, text="新增", command=self.add_combobox)
-        self.add_button.place(x=360, y=400)
+        self.add_button.place(x=350, y=450)
 
-        self.load_button = tk.Button(root, text="加載", command=self.load_ui)
-        self.load_button.place(x=430, y=400)
+        self.load_button = tk.Button(root, text="編輯", command=self.load_ui)
+        self.load_button.place(x=400, y=450)
 
         self.confirm_button = tk.Button(root, text="保存", command=self.save_as_py)
-        self.confirm_button.place(x=360, y=450)
-
-        self.save_button = tk.Button(root, text="預存", command=self.save_ui)
-        self.save_button.place(x=430, y=450)
+        self.confirm_button.place(x=450, y=450)
 
         self.combobox_list = []
 
@@ -94,7 +90,6 @@ class Application:
                     }
 
                     all_info.append(a_dict)
-
             else:
                 print("No entries found")
 
@@ -109,16 +104,6 @@ class Application:
             messagebox.showinfo("保存成功", f"程式碼已保存為 {self.option_entry1.get()}.py")
         except Exception as e:
             messagebox.showerror("保存失敗", f"保存程式碼時發生錯誤：{str(e)}")
-
-    def save_ui(self):
-        ui_config = [cb.get_config() for cb in self.combobox_list]
-        try:
-            with open(f"{self.option_entry1.get()}.json", "w", encoding="utf-8") as f:
-                json.dump(ui_config, f, ensure_ascii=False, indent=4)
-
-            messagebox.showinfo("保存成功", f"UI 配置已保存為 {self.option_entry1.get()}.json")
-        except Exception as e:
-            messagebox.showerror("保存失敗", f"保存 UI 配置時發生錯誤：{str(e)}")
 
     def load_ui(self):
         file_path = filedialog.askopenfilename(
