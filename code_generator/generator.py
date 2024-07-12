@@ -27,14 +27,12 @@ class CodeGenerator:
             current_value = cb.get_current_value()
             widget_width, widget_height = cb.get_size()
             component_type = cb.selected_option
+            values = cb.get_values()
 
             if component_type == 'Entry':
                 entries.append((f"entry{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
             elif component_type == 'Combobox':
-                values = cb.get_values()
-                if current_value not in values:
-                    values += (current_value, )
-                comboboxes.append((f"combobox{idx + 1}", values, pos[0], pos[1], widget_width, widget_height, current_value))
+                comboboxes.append((f"combobox{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
             elif component_type == 'Label':
                 labels.append((f"label{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
             elif component_type == 'Button':
@@ -59,8 +57,8 @@ class CodeGenerator:
                 code += f"    {combobox},\n"
             code += "]\n"
             code += "components.update({})\n"
-            code += "for combobox_name, values, x_combobox, y_combobox, width, height, current_value in comboboxes:\n"
-            code += "    components[combobox_name] = ttk.Combobox(root, values=values)\n"
+            code += "for combobox_name, current_value, x_combobox, y_combobox, width, height in comboboxes:\n"
+            code += "    components[combobox_name] = ttk.Combobox(root, values=['Option 1', 'Option 2', 'Option 3'])\n"
             code += "    components[combobox_name].place(x=x_combobox, y=y_combobox, width=width, height=height)\n"
             code += "    components[combobox_name].set(current_value)\n\n"
 

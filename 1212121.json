@@ -1,0 +1,92 @@
+[
+    {
+        "type": "Entry",
+        "position": [
+            11,
+            9
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "1313",
+        "values": []
+    },
+    {
+        "type": "Entry",
+        "position": [
+            10,
+            40
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "2222",
+        "values": []
+    },
+    {
+        "type": "Entry",
+        "position": [
+            10,
+            70
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "3333",
+        "values": []
+    },
+    {
+        "type": "Combobox",
+        "position": [
+            10,
+            100
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "444",
+        "values": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ]
+    },
+    {
+        "type": "Combobox",
+        "position": [
+            8,
+            132
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "55",
+        "values": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ]
+    },
+    {
+        "type": "Combobox",
+        "position": [
+            10,
+            160
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "66",
+        "values": [
+            "Option 1",
+            "Option 2",
+            "Option 3"
+        ]
+    }
+]

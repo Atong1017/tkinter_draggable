@@ -1,84 +1,26 @@
 [
     {
-        "type": "Label",
+        "type": "Entry",
         "position": [
             10,
             10
         ],
         "size": [
-            34,
-            18
+            100,
+            20
         ],
-        "current_value": "筆數:",
-        "values": []
+        "current_value": ""
     },
     {
-        "type": "Label",
+        "type": "Combobox",
         "position": [
             10,
             40
         ],
         "size": [
-            34,
-            17
-        ],
-        "current_value": "種類:",
-        "values": []
-    },
-    {
-        "type": "Entry",
-        "position": [
-            64,
-            11
-        ],
-        "size": [
             100,
             20
         ],
-        "current_value": "",
-        "values": []
-    },
-    {
-        "type": "Combobox",
-        "position": [
-            64,
-            41
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "Option 1",
-        "values": [
-            "Option 1",
-            "Option 2",
-            "Option 3"
-        ]
-    },
-    {
-        "type": "Entry",
-        "position": [
-            11,
-            70
-        ],
-        "size": [
-            465,
-            250
-        ],
-        "current_value": "",
-        "values": []
-    },
-    {
-        "type": "Button",
-        "position": [
-            348,
-            336
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "計算",
-        "values": []
+        "current_value": "Option 1"
     }
 ]

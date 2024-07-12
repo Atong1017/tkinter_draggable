@@ -6,7 +6,7 @@ root.geometry('500x500')
 root.title('Generated Window')
 
 entries = [
-    ('entry1', '', 10, 10, 100, 20),
+    ('entry1', '11', 10, 10, 100, 20),
 ]
 components = {}
 for entry_name, entry_value, x_entry, y_entry, width, height in entries:
@@ -15,11 +15,11 @@ for entry_name, entry_value, x_entry, y_entry, width, height in entries:
     components[entry_name].place(x=x_entry, y=y_entry, width=width, height=height)
 
 comboboxes = [
-    ('combobox2', 'Option 1', 10, 40, 100, 20),
+    ('combobox2', '22', 10, 40, 100, 20),
 ]
 components.update({})
-for combobox_name, current_value, x_combobox, y_combobox, width, height in comboboxes:
-    components[combobox_name] = ttk.Combobox(root, values=['Option 1', 'Option 2', 'Option 3'])
+for combobox_name, values, x_combobox, y_combobox, width, height, current_value in comboboxes:
+    components[combobox_name] = ttk.Combobox(root, values=values)
     components[combobox_name].place(x=x_combobox, y=y_combobox, width=width, height=height)
     components[combobox_name].set(current_value)
 

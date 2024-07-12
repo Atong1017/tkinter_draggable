@@ -97,7 +97,7 @@ class Application:
 
             else:
                 print("No entries found")
-
+        print(all_info)
         return all_info
 
     def save_as_py(self):

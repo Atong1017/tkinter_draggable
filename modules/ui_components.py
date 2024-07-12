@@ -125,6 +125,5 @@ class DraggableCombobox:
             'type': self.selected_option,
             'position': self.get_position(),
             'size': self.get_size(),
-            'current_value': self.get_current_value(),
-            'values': self.get_values() if self.selected_option == 'Combobox' else []
+            'current_value': self.get_current_value()
         }
