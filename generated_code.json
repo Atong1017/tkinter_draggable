@@ -1,15 +1,54 @@
 [
     {
-        "type": "Combobox",
+        "type": "Label",
         "position": [
-            15,
-            19
+            10,
+            10
+        ],
+        "size": [
+            34,
+            18
+        ],
+        "current_value": "筆數:",
+        "values": []
+    },
+    {
+        "type": "Label",
+        "position": [
+            10,
+            40
+        ],
+        "size": [
+            34,
+            17
+        ],
+        "current_value": "種類:",
+        "values": []
+    },
+    {
+        "type": "Entry",
+        "position": [
+            64,
+            11
         ],
         "size": [
             100,
             20
         ],
         "current_value": "",
+        "values": []
+    },
+    {
+        "type": "Combobox",
+        "position": [
+            64,
+            41
+        ],
+        "size": [
+            100,
+            20
+        ],
+        "current_value": "Option 1",
         "values": [
             "Option 1",
             "Option 2",
@@ -17,111 +56,29 @@
         ]
     },
     {
-        "type": "Combobox",
+        "type": "Entry",
         "position": [
-            313,
-            130
+            11,
+            70
         ],
         "size": [
-            100,
-            20
+            465,
+            250
         ],
         "current_value": "",
-        "values": [
-            "Option 1",
-            "Option 2",
-            "Option 3"
-        ]
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            110
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "自訂組數:",
         "values": []
     },
     {
-        "type": "Label",
+        "type": "Button",
         "position": [
-            50,
-            140
+            348,
+            336
         ],
         "size": [
             100,
             20
         ],
-        "current_value": "連錯換單:",
-        "values": []
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            170
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "%",
-        "values": []
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            200
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "%",
-        "values": []
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            230
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "歷史筆數",
-        "values": []
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            260
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "下單組數(-+):",
-        "values": []
-    },
-    {
-        "type": "Label",
-        "position": [
-            50,
-            290
-        ],
-        "size": [
-            100,
-            20
-        ],
-        "current_value": "次後不再下注:",
+        "current_value": "計算",
         "values": []
     }
 ]
