@@ -1,13 +1,15 @@
 編輯中
 
-![image](https://github.com/Atong1017/tkinter_draggable/assets/60724932/d6dabecc-21d8-40d4-9aa4-1b8446771086)
+![image](https://github.com/user-attachments/assets/b3a815ce-4cb9-4e42-9b8c-be19554100d3)
+
 
 
 
 
 生成.py後
 
-![image](https://github.com/Atong1017/tkinter_draggable/assets/60724932/94294eab-1b15-4a0e-a266-d95781316da8)
+![image](https://github.com/user-attachments/assets/507db0d8-743b-4d9c-a480-c77c2abcf67a)
+
 
 
 
