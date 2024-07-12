@@ -27,18 +27,11 @@ for combobox_name, current_value, x_combobox, y_combobox, width, height in combo
 labels = [
     ('label4', '筆數:', 10, 10, 40, 20),
     ('label5', '種類:', 10, 40, 100, 20),
+    ('label6', '計算', 413, 337, 43, 28),
 ]
 components.update({})
 for label_name, text, x_label, y_label, width, height in labels:
     components[label_name] = tk.Label(root, text=text)
     components[label_name].place(x=x_label, y=y_label, width=width, height=height)
-
-buttons = [
-    ('button6', '計算', 402, 334, 54, 34),
-]
-components.update({})
-for button_name, text, x_button, y_button, width, height in buttons:
-    components[button_name] = tk.Button(root, text=text)
-    components[button_name].place(x=x_button, y=y_button, width=width, height=height)
 
 root.mainloop()

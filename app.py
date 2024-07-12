@@ -79,7 +79,7 @@ class Application:
                         type = 'Combobox'
                     elif es == 'labels':
                         type = 'Label'
-                    elif es == 'button':
+                    elif es == 'buttons':
                         type = 'Button'
 
                     a_dict = {
