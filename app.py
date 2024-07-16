@@ -15,7 +15,7 @@ class Application:
         combobox_name = tk.Label(root, text='表單:')
         combobox_name.place(x=10, y=400)
 
-        self.option_combobox = ttk.Combobox(root, values=('Combobox', 'Entry', 'Label', 'Button'), width=10, height=5)
+        self.option_combobox = ttk.Combobox(root, values=('Combobox', 'Entry', 'Label', 'Button', 'Checkbutton'), width=10, height=5)
         self.option_combobox.current(1)
         self.option_combobox.place(x=45, y=401)
 
@@ -63,7 +63,7 @@ class Application:
         all_info = []
 
         # 使用正则表达式匹配 entries 列表
-        for es in ['entries', 'comboboxes', 'labels', 'buttons']:
+        for es in ['entries', 'comboboxes', 'labels', 'buttons', 'checkbuttons']:
             entries_pattern = re.compile(fr"{es}\s*=\s*\[([^\]]+)\]", re.DOTALL)
             matches = entries_pattern.search(a)
 
@@ -81,6 +81,8 @@ class Application:
                         type = 'Label'
                     elif es == 'buttons':
                         type = 'Button'
+                    elif es == 'checkbuttons':
+                        type = 'Checkbutton'
 
                     a_dict = {
                         "type": type,

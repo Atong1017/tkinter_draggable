@@ -26,6 +26,12 @@ class DraggableCombobox:
             if current_value == "":
                 current_value = 'Button'
             self.form = tk.Button(parent, text=current_value)
+        elif self.selected_option == 'Checkbutton':
+            if current_value == "":
+                current_value = 'Check'
+            self.check_var = tk.IntVar()
+            self.form = tk.Checkbutton(parent, text=current_value, variable=self.check_var, onvalue=1, offvalue=0, bg='LightGray')
+            self.check_var.set(1)
 
         # 選單位置、大小
         self.form.place(x=initial_position[0], y=initial_position[1], width=width, height=height)
@@ -114,6 +120,8 @@ class DraggableCombobox:
         elif self.selected_option == 'Label':
             return self.form.cget("text")
         elif self.selected_option == 'Button':
+            return self.form.cget("text")
+        elif self.selected_option == 'Checkbutton':
             return self.form.cget("text")
         return None
 

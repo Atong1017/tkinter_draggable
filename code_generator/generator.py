@@ -20,6 +20,7 @@ class CodeGenerator:
         comboboxes = []
         labels = []
         buttons = []
+        checkbuttons = []
 
         # 收集所有组件的信息
         for idx, cb in enumerate(self.combobox_list):
@@ -37,6 +38,8 @@ class CodeGenerator:
                 labels.append((f"label{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
             elif component_type == 'Button':
                 buttons.append((f"button{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
+            elif component_type == 'Checkbutton':
+                checkbuttons.append((f"checkbutton{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
 
         # 生成Entry初始化的程式碼
         if entries:
@@ -70,7 +73,7 @@ class CodeGenerator:
             code += "]\n"
             code += "components.update({})\n"
             code += "for label_name, text, x_label, y_label, width, height in labels:\n"
-            code += "    components[label_name] = tk.Label(root, text=text)\n"
+            code += "    components[label_name] = tk.Label(root, text=text\n"
             code += "    components[label_name].place(x=x_label, y=y_label, width=width, height=height)\n\n"
 
         # 生成Button初始化的程式碼
@@ -83,6 +86,16 @@ class CodeGenerator:
             code += "for button_name, text, x_button, y_button, width, height in buttons:\n"
             code += "    components[button_name] = tk.Button(root, text=text)\n"
             code += "    components[button_name].place(x=x_button, y=y_button, width=width, height=height)\n\n"
+
+        if checkbuttons:
+            code += "checkbuttons = [\n"
+            for checkbutton in checkbuttons:
+                code += f"    {checkbutton},\n"
+            code += "]\n"
+            code += "components.update({})\n"
+            code += "for checkbutton_name, text, x_checkbutton, y_checkbutton, width, height in checkbuttons:\n"
+            code += "    components[checkbutton_name] = tk.Checkbutton(root, text=text, onvalue=1, offvalue=0)\n"
+            code += "    components[checkbutton_name].place(x=x_checkbutton, y=y_checkbutton, width=width, height=height)\n\n"
 
         code += "root.mainloop()\n"
 
