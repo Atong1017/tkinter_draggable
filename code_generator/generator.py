@@ -73,7 +73,7 @@ class CodeGenerator:
             code += "]\n"
             code += "components.update({})\n"
             code += "for label_name, text, x_label, y_label, width, height in labels:\n"
-            code += "    components[label_name] = tk.Label(root, text=text\n"
+            code += "    components[label_name] = tk.Label(root, text=text)\n"
             code += "    components[label_name].place(x=x_label, y=y_label, width=width, height=height)\n\n"
 
         # 生成Button初始化的程式碼
