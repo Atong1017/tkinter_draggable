@@ -52,7 +52,7 @@ class Application:
         initial_position = (add_x, add_y)
         oc_get = self.option_combobox.get()
         new_combobox = DraggableCombobox(self.root, oc_get, initial_position, current_value=self.option_entry.get())
-        new_combobox.parent = self  # 設置父應用程序以便刪除
+        new_combobox.parent = self  # 設置父應用程式以便刪除
         self.combobox_list.append(new_combobox)
 
     #
@@ -62,14 +62,14 @@ class Application:
 
         all_info = []
 
-        # 使用正则表达式匹配 entries 列表
+        # 使用規則運算式匹配 entries 列表
         for es in ['entries', 'comboboxes', 'labels', 'buttons', 'checkbuttons']:
             entries_pattern = re.compile(fr"{es}\s*=\s*\[([^\]]+)\]", re.DOTALL)
             matches = entries_pattern.search(a)
 
             if matches:
                 entries_string = matches.group(1).strip()
-                # 解析 entries 字符串为 Python 对象
+                # 解析 entries 字串為 Python 物件
                 entries = eval(f"[{entries_string}]")
 
                 for e in entries:
@@ -110,7 +110,7 @@ class Application:
     def load_ui(self):
         file_path = filedialog.askopenfilename(
             filetypes=[("JSON files", "*.py"), ("All files", "*.*")],
-            title="選擇 UI 配置文件"
+            title="選擇 UI 設定檔"
         )
 
         if not file_path:
@@ -119,13 +119,13 @@ class Application:
         try:
             ui_config = self.py_to_dict(file_path)
 
-            # 清空当前控件
+            # 清空當前控制項
             for combobox in self.combobox_list:
                 combobox.form.destroy()
                 combobox.delete_button.destroy()
             self.combobox_list.clear()
 
-            # 加載新控件
+            # 加載新控制項
             for config in ui_config:
                 new_combobox = DraggableCombobox(
                     self.root,
@@ -135,7 +135,7 @@ class Application:
                     config['size'][1],
                     config['current_value']
                 )
-                new_combobox.parent = self  # 設置父應用程序以便刪除
+                new_combobox.parent = self  # 設置父應用程式以便刪除
                 self.combobox_list.append(new_combobox)
             messagebox.showinfo("加載成功", "UI 配置已加載")
         except Exception as e:
