@@ -48,5 +48,9 @@ components.update({})
 for checkbutton_name, text, x_checkbutton, y_checkbutton, width, height in checkbuttons:
     components[checkbutton_name] = tk.Checkbutton(root, text=text, onvalue=1, offvalue=0)
     components[checkbutton_name].place(x=x_checkbutton, y=y_checkbutton, width=width, height=height)
+    # 預設值參數代入方式
+    # var = tk.IntVar()
+    # components[checkbutton_name] = tk.Checkbutton(root, text=text, variable=var, onvalue=1, offvalue=0)
+    # var.set(1)  1:勾選
 
 root.mainloop()

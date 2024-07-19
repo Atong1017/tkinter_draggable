@@ -95,7 +95,11 @@ class CodeGenerator:
             code += "components.update({})\n"
             code += "for checkbutton_name, text, x_checkbutton, y_checkbutton, width, height in checkbuttons:\n"
             code += "    components[checkbutton_name] = tk.Checkbutton(root, text=text, onvalue=1, offvalue=0)\n"
-            code += "    components[checkbutton_name].place(x=x_checkbutton, y=y_checkbutton, width=width, height=height)\n\n"
+            code += "    components[checkbutton_name].place(x=x_checkbutton, y=y_checkbutton, width=width, height=height)\n"
+            code += "    # 預設值參數代入方式\n"
+            code += "    # var = tk.IntVar()\n"
+            code += "    # components[checkbutton_name] = tk.Checkbutton(root, text=text, variable=var, onvalue=1, offvalue=0)\n"
+            code += "    # var.set(1)  1:勾選\n\n"
 
         code += "root.mainloop()\n"
 
