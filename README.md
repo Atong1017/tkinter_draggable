@@ -8,7 +8,8 @@
 
 生成.py後
 
-![image](https://github.com/user-attachments/assets/cba181ad-23c4-48e7-a25d-5b29e1ddf069)
+![image](https://github.com/user-attachments/assets/8afcc06a-18d6-46ee-8c25-371a112105ed)
+
 
 
 
