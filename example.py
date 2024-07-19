@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 
 root = tk.Tk()
-root.geometry('500x500')
+root.geometry('500x400')
 root.title('Generated Window')
 
 entries = [

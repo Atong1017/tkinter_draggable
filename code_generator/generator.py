@@ -13,7 +13,7 @@ class CodeGenerator:
         code += f"root = tk.Tk()\n"
         root_width = self.root.winfo_width()
         root_height = self.root.winfo_height()
-        code += f"root.geometry('{root_width}x{root_height}')\n"
+        code += f"root.geometry('{root_width}x{root_height - 98}')\n"
         code += "root.title('Generated Window')\n\n"
 
         entries = []
