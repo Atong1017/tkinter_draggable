@@ -1,6 +1,6 @@
 編輯中
 
-![image](https://github.com/user-attachments/assets/b3a815ce-4cb9-4e42-9b8c-be19554100d3)
+![image](https://github.com/user-attachments/assets/ef8cac43-f749-424e-a5a4-2c54bc7329dc)
 
 
 
@@ -8,7 +8,8 @@
 
 生成.py後
 
-![image](https://github.com/user-attachments/assets/507db0d8-743b-4d9c-a480-c77c2abcf67a)
+![image](https://github.com/user-attachments/assets/cba181ad-23c4-48e7-a25d-5b29e1ddf069)
+
 
 
 
