@@ -20,7 +20,7 @@
 
 功能:
 
-1、(Combobox, Entry, Label, Button)可拖曳、調整大小
+1、(Combobox, Entry, Label, Button, Checkbutton)可拖曳、調整大小
 
 2、可預存、加載、編輯/刪除執行中的code
 
