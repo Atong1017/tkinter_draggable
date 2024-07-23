@@ -41,13 +41,15 @@ class CodeGenerator:
             elif component_type == 'Checkbutton':
                 checkbuttons.append((f"checkbutton{idx + 1}", current_value, pos[0], pos[1], widget_width, widget_height))
 
+        code += "components = {}\n"
+
         # 生成Entry初始化的程式碼
         if entries:
             code += "entries = [\n"
             for entry in entries:
                 code += f"    {entry},\n"
             code += "]\n"
-            code += "components = {}\n"
+            code += "components.update({})\n"
             code += "for entry_name, entry_value, x_entry, y_entry, width, height in entries:\n"
             code += "    components[entry_name] = tk.Entry(root)\n"
             code += "    components[entry_name].insert(0, entry_value)\n"

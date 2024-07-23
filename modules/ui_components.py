@@ -56,7 +56,7 @@ class DraggableCombobox:
         if self.form:
             self.form.destroy()
             self.delete_button.destroy()
-            self.parent.combobox_list.remove(self)
+            self.parent.options_list.remove(self)
 
     def on_press(self, event):
         self.select_entry(self.form)  # 选择控件
